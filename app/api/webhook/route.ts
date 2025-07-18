@@ -1,9 +1,11 @@
+// app/api/webhook/route.ts
+
 import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
-  return new NextResponse('OK', { status: 200 });
+  return NextResponse.json({ message: 'OK' }, { status: 200 });
 }
 
 export async function GET() {
-  return new NextResponse('Method Not Allowed', { status: 405 });
+  return NextResponse.json({ message: 'Method Not Allowed' }, { status: 405 });
 }
